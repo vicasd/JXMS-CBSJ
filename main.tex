@@ -1,0 +1,42 @@
+% !Mode:: "TeX:UTF-8"
+
+\documentclass[a3paper,14pt,UTF8,twoside,landscape,twocolumn]{JXMS-CBSJ}%A3、双栏
+% \documentclass[a4paper,14pt,UTF8,twoside,onecolumn]{JXMS-CBSJ} %A4、单栏
+
+
+%   Cover and TOC
+\begin{document}
+
+\input{setup/cover} %插入封面
+\fs \sihao \setlength{\baselineskip}{26pt} %设置行间距
+% \include{appendix/authorization}
+% \input{setup/abstract}
+
+
+%%%%%%------目录------%%%%%%
+\pagestyle{fancy} 
+\pagenumbering{Roman}
+\fancyhf{ }
+\fancyfoot[C]{\thepage} %页脚
+%-----------设置目录页眉页脚-------------%
+\tableofcontents
+
+
+\clearpage
+
+%   Main Body
+%%%%%%正文样式%%%%%%
+\pagestyle{fancy}  % 设置页面格式
+\pagenumbering{arabic}
+\fancyhf{ }
+\fancyhead[L]{ 中赣投勘察设计有限公司 } %左页眉
+\fancyhead[R]{ \fs\zihao{-4} \leftmark } %右页眉
+\fancyfoot[C]{-\thepage-} %页脚
+
+%   插入正文
+\include{body/chapter_1}
+\include{body/chapter_2}
+
+
+
+\end{document}
